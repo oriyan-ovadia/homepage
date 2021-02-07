@@ -51,6 +51,7 @@ export default function AboutMe() {
         <div css={textColCss}>
           <SectionWaveIcon color={colors.red} />
 
+          {/* Title */}
           <Heading
             css={sectionTitleCss}
             color={colors.red}
@@ -86,6 +87,8 @@ export default function AboutMe() {
             </Link>
           </div>
         </div>
+
+        {/* Picture of myself*/}
         <div css={pictureCss}>
           <PictureOfMyself />
         </div>

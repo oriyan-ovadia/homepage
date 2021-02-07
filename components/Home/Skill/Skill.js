@@ -8,7 +8,7 @@ import { colors } from 'styles/utils';
 import Buzzwords from './Buzzwords';
 
 const aboutMeCss = css`
-  padding-bottom: 20vh;
+  padding-bottom: 12vh;
 `;
 
 const sectionTitleCss = css`

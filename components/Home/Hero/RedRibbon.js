@@ -1,5 +1,6 @@
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import ArrowDownIcon from 'components/shared/icons/ArrowDownIcon';
+import RightArrowIcon from 'components/shared/icons/RightArrowIcon';
 import Text from 'components/shared/Text/Text';
 import {
   colors,
@@ -8,6 +9,15 @@ import {
   tabletOnly,
   tabletUp,
 } from 'styles/utils';
+
+const bounceKeyframes = keyframes`
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+`;
 
 const regBgCss = css`
   background-color: ${colors.red};
@@ -45,8 +55,11 @@ const scrollDownWrapperCss = css`
   }
 
   ${tabletUp} {
-    bottom: 15px;
+    bottom: 25px;
     right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -66,7 +79,10 @@ const arrowDownCss = css`
   width: 2.7rem;
 
   ${tabletUp} {
-    display: none;
+    margin-top: 12px;
+    width: 20px;
+    animation: ${bounceKeyframes} 800ms cubic-bezier(0.7, 0, 0.3, 1) infinite
+      alternate;
   }
 `;
 
@@ -74,10 +90,10 @@ export default function RedRibbon() {
   return (
     <div css={regBgCss}>
       <div css={scrollDownWrapperCss}>
-        <ArrowDownIcon css={arrowDownCss} />
         <Text css={scrollDownTextCss} color="white">
           Scroll down
         </Text>
+        <ArrowDownIcon css={arrowDownCss} />
       </div>
     </div>
   );

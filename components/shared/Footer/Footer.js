@@ -5,6 +5,7 @@ import Text from '../Text/Text';
 import { colors } from 'styles/utils';
 
 const footerCss = css`
+  background-color: white;
   height: 12vh;
   display: flex;
   align-items: center;

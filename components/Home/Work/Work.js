@@ -9,6 +9,7 @@ import { colors } from 'styles/utils';
 import Workplace from './Workplace';
 
 const aboutMeCss = css`
+  padding-top: 9vh;
   padding-bottom: 20vh;
 `;
 
