@@ -1,8 +1,6 @@
 import { css } from '@emotion/react';
 import Container from 'components/shared/Container/Container';
 import Heading from 'components/shared/Heading/Heading';
-import WavesIcon from 'components/shared/icons/WavesIcon';
-import Mark from 'components/shared/Mark/Mark';
 import Period from 'components/shared/Period/Period';
 import SectionWaveIcon from 'components/shared/SectionWaveIcon/SectionWaveIcon';
 import Text from 'components/shared/Text/Text';
