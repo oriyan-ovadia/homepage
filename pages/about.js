@@ -1,5 +1,13 @@
 import AboutMe from 'components/Home/AboutMe/AboutMe';
+import Head from 'next/head';
+import { Fragment } from 'react';
 
 export default function About() {
-  return <h1>About</h1>;
+  return (
+    <Fragment>
+      <Head>
+        <title>Oriyan Ovadia | About Me</title>
+      </Head>
+    </Fragment>
+  );
 }

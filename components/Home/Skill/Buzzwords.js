@@ -60,8 +60,8 @@ export default function Buzzwords() {
     <div css={buzzwordsCss}>
       {buzzwords.map(([Logo, label]) => {
         return (
-          <div>
-            <div textAlign="center" css={logoCss}>
+          <div key={label}>
+            <div css={logoCss}>
               <Logo />
             </div>
             <Text css={labelCss} size="base" textAlign="center">

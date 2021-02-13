@@ -26,6 +26,7 @@ export default function Skill() {
         <SectionWaveIcon color={colors.navy} />
 
         <Heading
+          as="h2"
           css={sectionTitleCss}
           color={colors.navy}
           variant="h1"
@@ -38,9 +39,9 @@ export default function Skill() {
 
         {/* Inner */}
         <div css={innerTextCss}>
-          <Heading variant="h3">
+          <Heading as="h2" variant="h3">
             No bullshit,
-            <Text fontType="serif" size="lg">
+            <Text as="div" fontType="serif" size="lg">
               just buzzwords
               <Period color={colors.navy} />
             </Text>

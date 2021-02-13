@@ -2,13 +2,14 @@ import { css } from '@emotion/react';
 import Container from 'components/shared/Container/Container';
 import Heading from 'components/shared/Heading/Heading';
 import WavesIcon from 'components/shared/icons/WavesIcon';
+import Mark from 'components/shared/Mark/Mark';
 import Period from 'components/shared/Period/Period';
 import SectionWaveIcon from 'components/shared/SectionWaveIcon/SectionWaveIcon';
 import Text from 'components/shared/Text/Text';
-import { colors } from 'styles/utils';
+import { colors, mediaDown, screenSize, viewport } from 'styles/utils';
 import Workplace from './Workplace';
 
-const aboutMeCss = css`
+const workCss = css`
   padding-top: 9vh;
   padding-bottom: 20vh;
 `;
@@ -18,45 +19,50 @@ const subTitleCss = css`
   margin-bottom: 90px;
 `;
 
-const wavesIconCss = css`
-  width: 80px;
-  color: ${colors.navy};
-  margin-bottom: 40px;
-`;
-
 const timelineCss = css`
   margin-top: 3em;
-  border-top: 1px solid ${colors.veryLightGray};
+
+  ${viewport.mediumUp} {
+    border-top: 1px solid ${colors.veryLightGray};
+  }
 `;
 
 const timelineInnerCss = css`
   display: grid;
   grid-column-gap: 45px;
-  grid-template-columns: 1fr 1fr 1fr;
-  position: relative;
-  top: -41px;
-`;
 
-const moodImageCss = css`
-  background-image: url(/media/laptop-bg-min.jpeg);
-  height: 200px;
+  ${mediaDown(screenSize.medium)} {
+    grid-row-gap: 7vh;
+  }
+
+  ${viewport.mediumUp} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 const topContainerCss = css`
   display: flex;
   align-items: flex-end;
+
   div {
     flex: 1;
   }
 `;
 
+const timelineContainer = css`
+  ${mediaDown(screenSize.medium)} {
+    padding-left: unset;
+    padding-right: unset;
+  }
+`;
+
 export default function Experience() {
   return (
-    <section css={aboutMeCss}>
+    <section css={workCss}>
       <Container css={topContainerCss}>
         <div>
           <SectionWaveIcon color={colors.navy} />
-          <Heading variant="h1" upperCase>
+          <Heading as="h2" variant="h1" upperCase>
             WO
             <br />
             RK.
@@ -82,7 +88,7 @@ export default function Experience() {
       </Container>
       {/* Timeline */}
       <div css={timelineCss}>
-        <Container>
+        <Container css={timelineContainer}>
           <div css={timelineInnerCss}>
             <Workplace companyName="Healthy.io" year="2019">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed

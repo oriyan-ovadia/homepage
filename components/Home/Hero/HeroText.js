@@ -59,7 +59,7 @@ export default function HeroText() {
   return (
     <Container css={heroTextCss}>
       <div css={innerTextCss}>
-        <Heading color="white" variant="h2">
+        <Heading as="h1" color="white" variant="h2">
           Oriyan Ovadia.
         </Heading>
         <Heading css={title2Css} variant="h3">

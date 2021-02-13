@@ -6,7 +6,7 @@ import Link from 'components/shared/Link/Link';
 import Period from 'components/shared/Period/Period';
 import SectionWaveIcon from 'components/shared/SectionWaveIcon/SectionWaveIcon';
 import Text from 'components/shared/Text/Text';
-import { colors } from 'styles/utils';
+import { colors, viewport } from 'styles/utils';
 
 const aboutMeCss = css`
   padding-top: 20vh;
@@ -30,18 +30,24 @@ const learnMoreCss = css`
 `;
 
 const containerCss = css`
-  position: relative;
-  display: flex;
+  ${viewport.smallOnly} {
+    display: grid;
+    grid-row-gap: 80px;
+  }
+
+  ${viewport.mediumUp} {
+    /* Do we needs this relative? */
+    position: relative;
+    display: flex;
+  }
 `;
 
 const textColCss = css`
-  flex: 1;
+  flex-basis: 330px;
 `;
 
 const pictureCss = css`
-  position: absolute;
-  right: 0;
-  top: 0;
+  flex: 1;
 `;
 
 export default function AboutMe() {
@@ -53,6 +59,7 @@ export default function AboutMe() {
 
           {/* Title */}
           <Heading
+            as="h2"
             css={sectionTitleCss}
             color={colors.red}
             variant="h1"
