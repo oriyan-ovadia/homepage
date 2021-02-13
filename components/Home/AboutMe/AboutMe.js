@@ -43,7 +43,10 @@ const containerCss = css`
 `;
 
 const textColCss = css`
-  flex-basis: 330px;
+  ${viewport.mediumUp} {
+    flex-basis: 330px;
+    margin-right: 35px;
+  }
 `;
 
 const pictureCss = css`
