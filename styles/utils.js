@@ -8,6 +8,7 @@ export const colors = {
   gray: 'var(--gray)',
   navy: 'var(--navy)',
   red: 'var(--red)',
+  yellow: 'var(--yellow)',
 
   /* Light colors */
   lightGray: 'var(--light-gray)',
@@ -34,8 +35,9 @@ export const screenSize = {
 };
 
 export const fontFamily = {
-  display: 'Montserrat',
-  sans: 'system-ui',
+  displayPrimary: 'Gilroy',
+  displaySecondary: 'Montserrat',
+  sans: 'Lato',
   serif: 'Libre-Baskerville',
 };
 

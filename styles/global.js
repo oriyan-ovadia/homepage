@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 import { fontFacesCss } from './fontFaces';
-import { colors } from './utils';
+import { colors, fontFamily } from './utils';
 
 export const globalCss = css`
   :root {
@@ -9,6 +9,7 @@ export const globalCss = css`
     --gray: #606060;
     --navy: #414a6b;
     --red: #ff5851;
+    --yellow: #f3c130;
 
     /* Light colors*/
     --light-gray: #f8f8f8;
@@ -21,9 +22,10 @@ export const globalCss = css`
 
   html,
   body {
+    color: ${colors.black};
     padding: 0;
     margin: 0;
-    font-family: Montserrat, system-ui;
+    font-family: ${fontFamily.sans}, system-ui;
     background-color: ${colors.lightGray};
   }
 

@@ -1,4 +1,6 @@
+import { css } from '@emotion/react';
 import Text from 'components/shared/Text/Text';
+import { fontFamily } from 'styles/utils';
 
 const headingSize = {
   h1: '2xl',
@@ -7,9 +9,25 @@ const headingSize = {
   h4: 'md',
 };
 
-function Heading({ children, variant = 'h3', ...restProps }) {
+const headingCss = props => css`
+  ${props.font === 'primary' &&
+  css`
+    font-family: ${fontFamily.displayPrimary};
+  `}
+  ${props.font === 'secondary' &&
+  css`
+    font-family: ${fontFamily.displaySecondary};
+  `}
+`;
+
+function Heading({ children, font = 'primary', variant = 'h3', ...restProps }) {
   return (
-    <Text fontWeight={500} size={headingSize[variant]} {...restProps}>
+    <Text
+      css={headingCss({ font })}
+      fontWeight={900}
+      size={headingSize[variant]}
+      {...restProps}
+    >
       {children}
     </Text>
   );

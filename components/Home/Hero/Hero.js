@@ -3,6 +3,7 @@ import RedRibbon from './RedRibbon';
 import HeroText from './HeroText';
 
 const heroCss = css`
+  font-size: ${null};
   height: 100vh;
   width: 100%;
 `;

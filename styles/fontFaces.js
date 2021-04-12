@@ -11,6 +11,14 @@ import { css } from '@emotion/react';
  */
 export const fontFacesCss = css`
   @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: local('Lato-Regular'), url('/fonts/Lato-Regular.woff2') format('woff2');
+  }
+
+  @font-face {
     font-family: 'Libre-Baskerville';
     font-style: normal;
     font-display: swap;
@@ -35,5 +43,14 @@ export const fontFacesCss = css`
     font-weight: 500;
     src: local('Montserrat-Bold'),
       url('/fonts/Montserrat-Bold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 900;
+    src: local('Gilroy-ExtraBold'),
+      url('/fonts/Gilroy-ExtraBold.woff2') format('woff2');
   }
 `;
