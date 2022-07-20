@@ -5,10 +5,10 @@ import { colors, fontFamily } from './utils';
 
 export const globalCss = css`
   :root {
-    --black: #1c1b20;
+    --black: #3a3a3a;
     --gray: #606060;
     --navy: #414a6b;
-    --red: #ff5851;
+    --red: #f66;
     --yellow: #f3c130;
 
     /* Light colors*/
