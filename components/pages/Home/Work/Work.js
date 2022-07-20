@@ -80,7 +80,7 @@ export default function Experience() {
       </Container>
       <Container>
         <Text css={subTitleCss} size="md" fontType="serif">
-          Over 6 years of experience in developing web applications with a deep
+          Over 7 years of experience in developing web applications with a deep
           understanding of the modern web and surrounding technologies.
         </Text>
       </Container>
