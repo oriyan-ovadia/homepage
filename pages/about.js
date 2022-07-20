@@ -1,4 +1,4 @@
-import Hero from 'components/About/Hero';
+import Hero from 'components/pages/About/Hero';
 import { Fragment } from 'react';
 
 export default function About() {
