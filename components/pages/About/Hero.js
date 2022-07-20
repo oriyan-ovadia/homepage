@@ -45,7 +45,14 @@ export default function Hero() {
           <br />
           out.
         </Heading>
-        <div></div>
+        <div
+          css={css`
+            font-size: 80px;
+            margin-left: 40px;
+          `}
+        >
+          Under construction
+        </div>
       </Container>
     </header>
   );
