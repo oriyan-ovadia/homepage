@@ -89,15 +89,13 @@ export default function Experience() {
         <Container css={timelineContainer}>
           <div css={timelineInnerCss}>
             <Workplace companyName="Healthy.io" year="2019">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              fringilla, ipsum sed luctus ultricies, tortor nibh fermentum enim,
-              sed ultrices neque mauris eu sem. Aliquam condimentum dui sed urna
-              sollicitudin, eget porta nisi efficitur. Donec eleifend dui quis
-              ullamcorper aliquam. Nulla turpis erat, mollis ac cursus vel,
-              feugiat vel est. Vivamus ac tincidunt sapien. Proin fermentum at
-              velit et sagittis. Donec ut massa semper, rhoncus nisl sed,
-              gravida sapien. Suspendisse eros ante, facilisis eu dui ac,
-              fermentum tincidunt nibh.
+              Created multiple web applications and websites using React.
+              Experience in creating SSR and Static websites using Next.js.
+              Extensive work in a Monorepo using NPM Workspaces. Writing E2E,
+              Integration and Unit tests. Worked with Redux, MobX, GraphQL,
+              Emotion, Linaria. Took full responsibility in leading the creation
+              of a Design System. Empowered fellow team members by giving
+              presentations and sharing knowledge across domains.
             </Workplace>
             <Workplace companyName="NHT" year="2018">
               Working with Angaulr, PHP, TypeScript and MySQL. Creating a SaaS

@@ -37,17 +37,6 @@ export default function Skill() {
           ILL.
         </Heading>
 
-        {/* Inner */}
-        <div css={innerTextCss}>
-          <Heading as="h2" variant="h3">
-            No bullshit,
-            <Text as="div" fontType="serif" size="lg">
-              just buzzwords
-              <Period color={colors.navy} />
-            </Text>
-          </Heading>
-        </div>
-
         <Buzzwords />
       </Container>
     </section>
