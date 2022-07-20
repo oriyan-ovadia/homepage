@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import PictureOfMyself from 'components/Home/AboutMe/PictureOfMyself';
+import PictureOfMyself from 'components/pages/Home/AboutMe/PictureOfMyself';
 import Container from 'components/shared/Container/Container';
 import Heading from 'components/shared/Heading/Heading';
 import Link from 'components/shared/Link/Link';
@@ -9,8 +9,7 @@ import Text from 'components/shared/Text/Text';
 import { colors, viewport } from 'styles/utils';
 
 const aboutMeCss = css`
-  padding-top: 20vh;
-  padding-bottom: 20vh;
+  padding-block: 20vh;
 `;
 
 const sectionTitleCss = css`
@@ -36,7 +35,6 @@ const containerCss = css`
   }
 
   ${viewport.mediumUp} {
-    /* Do we needs this relative? */
     position: relative;
     display: flex;
   }
@@ -45,7 +43,7 @@ const containerCss = css`
 const textColCss = css`
   ${viewport.mediumUp} {
     flex-basis: 330px;
-    margin-right: 35px;
+    margin-right: 105px;
   }
 `;
 
