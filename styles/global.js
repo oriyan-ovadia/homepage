@@ -1,36 +1,21 @@
 import { css } from '@emotion/react';
 
 import { fontFacesCss } from './fontFaces';
-import { colors, fontFamily } from './utils';
+import { colors, fontFamily, fontSize } from './utils';
 
 export const globalCss = css`
-  :root {
-    --black: #3a3a3a;
-    --gray: #606060;
-    --navy: #414a6b;
-    --red: #f66;
-    --yellow: #f3c130;
-
-    /* Light colors*/
-    --light-gray: #f8f8f8;
-    --very-light-gray: #e0e0e0;
-
-    font-size: ${(10 / 16) * 100}%;
+  * {
+    box-sizing: border-box;
   }
 
-  ${fontFacesCss}
-
-  html,
   body {
-    color: ${colors.black};
+    font-family: ${fontFamily.primary};
+    font-size: ${fontSize.md};
+    color: ${colors.bodyFg};
+    background-color: ${colors.bodyBg};
     padding: 0;
     margin: 0;
-    font-family: ${fontFamily.sans}, system-ui;
-    background-color: ${colors.lightGray};
-  }
-
-  body {
-    font-size: 1.8rem;
+    line-height: 1.5;
   }
 
   a {
@@ -38,12 +23,24 @@ export const globalCss = css`
     text-decoration: none;
   }
 
-  * {
-    box-sizing: border-box;
-  }
-
   strong,
   b {
     font-weight: 500;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 `;

@@ -7,7 +7,7 @@ import {
 } from 'styles/utils';
 
 const containerCss = css`
-  max-width: 1020px;
+  max-width: 1280px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -18,8 +18,7 @@ const containerCss = css`
   }
 
   ${tabletUp} {
-    padding-left: ${CONTAINER_PADDING_DESKTOP};
-    padding-right: ${CONTAINER_PADDING_DESKTOP};
+    padding-inline: 6rem;
   }
 `;
 

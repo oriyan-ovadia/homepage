@@ -1,18 +1,28 @@
 import { css } from '@emotion/react';
-import RedRibbon from './RedRibbon';
-import HeroText from './HeroText';
+import Text from 'components/shared/Text/Text';
+import { colors } from 'styles/utils';
 
-const heroCss = css`
-  font-size: ${null};
-  height: 100vh;
-  width: 100%;
+const subtitleCss = css`
+  margin-block: 16px 20px;
 `;
 
-export default function Hero() {
+const descriptionCss = css`
+  max-width: 20rem;
+`;
+
+export function Hero() {
   return (
-    <section css={heroCss}>
-      <RedRibbon />
-      <HeroText />
+    <section>
+      <Text appearance="white" as="h1" fontWeight={700} size="xl">
+        Oriyan Ovadia
+      </Text>
+      <Text appearance="white" css={subtitleCss} fontWeight={500} size="lg">
+        Senior Frontend Engineer
+      </Text>
+      <Text css={descriptionCss}>
+        I build accessible, inclusive products and digital experiences for the
+        web.
+      </Text>
     </section>
   );
 }
