@@ -12,6 +12,7 @@ export const globalCss = css`
     font-family: ${fontFamily.primary};
     font-feature-settings: 'ss03', 'cv02', 'cv11';
     font-size: ${fontSize.md};
+    -webkit-font-smoothing: antialiased;
     color: ${colors.bodyFg};
     background-color: ${colors.bodyBg};
     padding: 0;

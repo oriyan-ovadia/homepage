@@ -57,7 +57,7 @@ export function Experience() {
           return <Workplace key={workplace.id} workplace={workplace} />;
         })}
       </div>
-      <Text css={viewFullCss}>
+      <Text css={viewFullCss} fontWeight={500}>
         <a href="/" target="_blank">
           <span className="anchor-text">View Full Résumé</span>{' '}
           <ArrowRightIcon className="arrow-icon" css={arrowIconCss} />
