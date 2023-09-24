@@ -106,6 +106,10 @@ const descriptionCss = css`
   }
 `;
 
+const companyName = css`
+  display: inline-block;
+`;
+
 const tagsCss = css`
   display: flex;
   flex-wrap: wrap;
@@ -140,8 +144,11 @@ export function Workplace({ workplace }) {
       <div css={detailsCss}>
         <h3 className="title" css={titleCss}>
           <a href={url} target="_blank">
-            {title}{' '}
-            <ArrowRightUpIcon className="arrow-icon" css={arrowIconCss} />
+            {position} at{' '}
+            <span css={companyName}>
+              {name}{' '}
+              <ArrowRightUpIcon className="arrow-icon" css={arrowIconCss} />
+            </span>
             <div css={anchorTakeoverCss}></div>
           </a>
         </h3>
