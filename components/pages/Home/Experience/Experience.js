@@ -19,6 +19,7 @@ const layoutCss = css`
 const viewFullCss = css`
   color: ${colors.white};
   margin-top: 4rem;
+  display: inline-block;
 
   a {
     display: flex;
@@ -58,7 +59,7 @@ export function Experience() {
         })}
       </div>
       <Text css={viewFullCss} fontWeight={500}>
-        <a href="/" target="_blank">
+        <a href="Oriyan Ovadia - Resume.pdf" target="_blank">
           <span className="anchor-text">View Full Résumé</span>{' '}
           <ArrowRightIcon className="arrow-icon" css={arrowIconCss} />
         </a>
