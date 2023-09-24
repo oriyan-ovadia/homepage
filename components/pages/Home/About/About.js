@@ -3,8 +3,8 @@ import { PageSection } from 'components/shared/PageSection/PageSection';
 import { SectionHeading } from 'components/shared/SectionHeading/SectionHeading';
 import Text from 'components/shared/Text/Text';
 import { colors } from 'styles/utils';
-import { useSidebarMenuIndication } from '../SidebarMenu/useSidebarMenuIndication';
 import { useRef } from 'react';
+import Anchor from 'components/shared/Anchor/Anchor';
 
 const layoutCss = css`
   display: flex;
@@ -13,21 +13,21 @@ const layoutCss = css`
 `;
 
 export function About() {
-  const elementRef = useRef(null);
-
-  useSidebarMenuIndication(elementRef);
-
   return (
-    <PageSection id="about" ref={elementRef}>
-      <PageSection.Heading appearance="lime">About</PageSection.Heading>
+    <PageSection id="about">
+      <PageSection.Heading>About</PageSection.Heading>
       <div css={layoutCss}>
-        <Text>Highly motivated with great work ethic.</Text>
         <Text>
-          Responsible, with quick perception and systemic vision. Able to work
-          in a team and cope with difficulties and a tight schedule. Very
-          organized and able to adapt to any work environment. With the love for
-          coding, I'm interested in developing and enriching user experience
-          while using new and challenging technologies.
+          I'm currently a Frontend Engineer at{' '}
+          <Anchor href="https://www.lemonade.com/">Lemonade</Anchor>,
+          collaborating with an amazing team to craft web experiences.
+        </Text>
+        <Text>
+          I enjoy bridging the gap between engineering and design — combining my
+          technical knowledge with my keen eye for design to create a beautiful
+          product. My goal is to always build applications that are scalable and
+          efficient under the hood while providing engaging, pixel-perfect user
+          experiences.
         </Text>
         <Text>
           When I'm not at the computer, I usually do brunches, draw, play

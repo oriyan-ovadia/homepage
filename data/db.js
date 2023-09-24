@@ -70,7 +70,7 @@ const experience = [
 const testimonials = [
   {
     content:
-      "With fast learning skills, friendly and smiling personality and a passion to building a beautiful user and developer experience, and you get one of the best developers I've worked with in my career.",
+      "Has fast learning skills, friendly and smiling personality and a passion to building a beautiful user and developer experience. One of the best developers I've worked with in my career.",
   },
   {
     content:

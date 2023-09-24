@@ -1,27 +1,36 @@
 import { Tag } from 'components/shared/Tag/Tag';
 import Text from 'components/shared/Text/Text';
-import { colors, fontSize } from 'styles/utils';
+import { colors, fontSize, viewport } from 'styles/utils';
 
 import { css } from '@emotion/react';
 import { ArrowRightUpIcon } from 'components/shared/icons/ArrowRightUpIcon';
 
 const workplaceCss = css`
-  display: flex;
-  column-gap: 10px;
-  position: relative;
-
-  &:hover {
-    .bg {
-      /* display: block !important; */
-      opacity: 1;
+  ${viewport.small} {
+    &:active {
+      .title {
+        color: ${colors.primaryLight};
+      }
     }
+  }
 
-    .title {
-      color: ${colors.primaryLight};
-    }
+  ${viewport.large} {
+    display: flex;
+    column-gap: 10px;
+    position: relative;
 
-    .arrow-icon {
-      transform: translate(0.18rem, -0.18rem);
+    &:hover {
+      .bg {
+        opacity: 1;
+      }
+
+      .title {
+        color: ${colors.primaryLight};
+      }
+
+      .arrow-icon {
+        transform: translate(0.18rem, -0.18rem);
+      }
     }
   }
 `;
@@ -34,7 +43,6 @@ const detailsCss = css`
 `;
 
 const hoverCss = css`
-  /* display: none; */
   opacity: 0;
 
   transition-property: all;
@@ -55,6 +63,10 @@ const hoverCss = css`
   left: -1.5rem;
   right: -1.5rem;
   position: absolute;
+
+  ${viewport.small} {
+    display: none;
+  }
 `;
 
 const durationCss = css`
@@ -88,6 +100,7 @@ const arrowIconCss = css`
 
 const descriptionCss = css`
   line-height: 1.6;
+
   :not(:last-of-type) {
     margin-bottom: 10px;
   }
@@ -101,11 +114,15 @@ const tagsCss = css`
 `;
 
 const anchorTakeoverCss = css`
+  position: absolute;
   top: -1rem;
   bottom: -1rem;
   left: -1.5rem;
   right: -1.5rem;
-  position: absolute;
+
+  ${viewport.small} {
+    display: none;
+  }
 `;
 
 export function Workplace({ workplace }) {
@@ -122,7 +139,7 @@ export function Workplace({ workplace }) {
       </div>
       <div css={detailsCss}>
         <h3 className="title" css={titleCss}>
-          <a href={url}>
+          <a href={url} target="_blank">
             {title}{' '}
             <ArrowRightUpIcon className="arrow-icon" css={arrowIconCss} />
             <div css={anchorTakeoverCss}></div>
@@ -137,7 +154,7 @@ export function Workplace({ workplace }) {
         </div>
         <div css={tagsCss}>
           {tags.map(tagName => (
-            <Tag>{tagName}</Tag>
+            <Tag key={tagName}>{tagName}</Tag>
           ))}
         </div>
       </div>

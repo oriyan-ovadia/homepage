@@ -16,7 +16,7 @@ const footerCss = css`
 const heartCss = css`
   width: 12px;
   color: ${colors.primaryLight};
-  margin-inline: 6px 3px;
+  margin-inline: 4px 3px;
   opacity: 0.8;
 `;
 

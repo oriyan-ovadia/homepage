@@ -7,8 +7,6 @@ export function useSidebarMenuIndication(elementRef) {
 
   const { activeHash, onClickNavItem, onSetActiveHash } = useSidebarMenu();
 
-  console.log(elementRef.current, isViewed);
-
   useEffect(() => {
     onSetActiveHash(elementRef.current.id);
   }, [isViewed]);

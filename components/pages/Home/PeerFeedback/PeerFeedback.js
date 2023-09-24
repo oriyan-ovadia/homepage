@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import { PageSection } from 'components/shared/PageSection/PageSection';
 import { SectionHeading } from 'components/shared/SectionHeading/SectionHeading';
 import Text from 'components/shared/Text/Text';
-// import { Tooltip } from 'components/shared/Tooltip/Tooltip';
 import { db } from 'data/db';
 
 const exCss = css``;
@@ -34,17 +33,14 @@ const liCss = css`
   }
 `;
 
-export function Testimonials() {
+export function PeerFeedback() {
   return (
-    <PageSection id="testimonials">
-      <PageSection.Heading appearance="primary">
-        Testimonials
-      </PageSection.Heading>
-      {/* <Tooltip content="asdasdasdasd">What's this?</Tooltip> */}
+    <PageSection id="peer-feedback">
+      <PageSection.Heading>Peer Feedback</PageSection.Heading>
       <ul css={ulCss}>
         {db.testimonials.map(({ content }) => {
           return (
-            <li css={liCss}>
+            <li css={liCss} key={content}>
               <Text as="quote" size="sm">
                 {content}
               </Text>

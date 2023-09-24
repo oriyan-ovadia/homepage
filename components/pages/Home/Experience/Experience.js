@@ -5,7 +5,6 @@ import { PageSection } from 'components/shared/PageSection/PageSection';
 import { useRef } from 'react';
 import { useIsViewed } from 'hooks/useIsViewed';
 import { useSidebarMenu } from 'components/pages/Home/SidebarMenu/useSidebarMenu';
-import { useSidebarMenuIndication } from '../SidebarMenu/useSidebarMenuIndication';
 import Text from 'components/shared/Text/Text';
 import { ArrowRightIcon } from 'components/shared/icons/ArrowRightIcon';
 import { colors } from 'styles/utils';
@@ -50,20 +49,16 @@ const arrowIconCss = css`
 `;
 
 export function Experience() {
-  const elementRef = useRef(null);
-
-  useSidebarMenuIndication(elementRef);
-
   return (
-    <PageSection id="experience" ref={elementRef}>
-      <PageSection.Heading appearance="purple">Experience</PageSection.Heading>
+    <PageSection id="experience">
+      <PageSection.Heading>Experience</PageSection.Heading>
       <div css={layoutCss}>
         {db.experience.map(workplace => {
-          return <Workplace workplace={workplace} />;
+          return <Workplace key={workplace.id} workplace={workplace} />;
         })}
       </div>
       <Text css={viewFullCss}>
-        <a href="/">
+        <a href="/" target="_blank">
           <span className="anchor-text">View Full Résumé</span>{' '}
           <ArrowRightIcon className="arrow-icon" css={arrowIconCss} />
         </a>

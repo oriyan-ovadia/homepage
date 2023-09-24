@@ -87,12 +87,14 @@ export const tabletUp = `@media (min-width: ${screenSizes.tablet}px)`;
 export const desktopUp = `@media (min-width: ${screenSizes.desktop}px)`;
 
 export const viewport = {
-  smallOnly: mediaDown(screenSize.small),
-  smallUp: mediaUp(screenSize.small),
-  mediumOnly: mediaBetween(screenSize.medium, screenSize.xLarge - 1),
-  mediumUp: mediaUp(screenSize.medium),
-  largeOnly: '',
-  largeUp: '',
-  largeUp: mediaUp(screenSize.large),
-  xLargeUp: mediaUp(screenSize.xLarge),
+  small: mediaDown(990),
+  large: mediaUp(990),
+  // smallOnly: mediaDown(screenSize.small),
+  // smallUp: mediaUp(screenSize.small),
+  // mediumOnly: mediaBetween(screenSize.medium, screenSize.xLarge - 1),
+  // mediumUp: mediaUp(screenSize.medium),
+  // largeOnly: '',
+  // largeUp: '',
+  // largeUp: mediaUp(screenSize.large),
+  // xLargeUp: mediaUp(screenSize.xLarge),
 };

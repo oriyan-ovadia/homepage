@@ -10,6 +10,7 @@ export const globalCss = css`
 
   body {
     font-family: ${fontFamily.primary};
+    font-feature-settings: 'ss03', 'cv02', 'cv11';
     font-size: ${fontSize.md};
     color: ${colors.bodyFg};
     background-color: ${colors.bodyBg};

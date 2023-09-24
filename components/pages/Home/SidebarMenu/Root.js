@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import Text from 'components/shared/Text/Text';
 import { useEffect, useState } from 'react';
-import { colors } from 'styles/utils';
+import { colors, viewport } from 'styles/utils';
 import { useSidebarMenu } from './useSidebarMenu';
 
 const items = [
@@ -14,8 +14,8 @@ const items = [
     href: '#experience',
   },
   {
-    label: 'Testimonials',
-    href: '#testimonials',
+    label: 'Peer Feedback',
+    href: '#peer-feedback',
   },
 ];
 
@@ -34,6 +34,12 @@ function scrollTo(targetEl) {
     behavior: 'smooth',
   });
 }
+
+const sidebarMenuRootCss = css`
+  ${viewport.small} {
+    display: none;
+  }
+`;
 
 const ulCss = css`
   max-width: max-content;
@@ -78,7 +84,7 @@ export function Root() {
   const { activeHash, onClickNavItem } = useSidebarMenu();
 
   return (
-    <nav>
+    <nav css={sidebarMenuRootCss}>
       <ul css={ulCss}>
         {items.map(({ href, label }) => {
           const isActive = activeHash === href;

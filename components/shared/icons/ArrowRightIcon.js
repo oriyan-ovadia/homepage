@@ -7,9 +7,9 @@ export function ArrowRightIcon({ className }) {
       className={className}
     >
       <path
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M3 10a.75.75 0 0 1 .75-.75h10.64l-4.16-3.96a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.16-3.96H3.75A.75.75 0 0 1 3 10z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
     </svg>
   );
