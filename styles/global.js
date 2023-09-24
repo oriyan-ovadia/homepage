@@ -20,6 +20,17 @@ export const globalCss = css`
     line-height: 1.5;
   }
 
+  ::selection {
+    color: #134e4a;
+    background-color: #5eead4;
+  }
+
+  /* Firefox */
+  ::-moz-selection {
+    color: #134e4a;
+    background: #5eead4;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
