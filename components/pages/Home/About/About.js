@@ -31,7 +31,7 @@ export function About() {
         </Text>
         <Text>
           When I'm not at the computer, I usually do brunches, draw, play
-          PlayStation, and make homemade delicious popsicles.
+          PlayStation, and make a delicious homemade jam.
         </Text>
       </div>
     </PageSection>
