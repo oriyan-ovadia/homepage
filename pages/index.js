@@ -1,9 +1,8 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { About } from 'components/pages/Home/About/About';
 import { Experience } from 'components/pages/Home/Experience/Experience';
 import { Hero } from 'components/pages/Home/Hero/Hero';
 import { Footer } from 'components/pages/Home/Footer/Footer';
-import LaptopBanner from 'components/pages/Home/LaptopBanner/LaptopBanner';
 import Head from 'next/head';
 import Container from 'components/shared/Container/Container';
 import { css } from '@emotion/react';
