@@ -1,4 +1,4 @@
-import { colors } from 'styles/utils';
+import { colors, viewportQuery } from 'styles/utils';
 import { style } from '@vanilla-extract/css';
 
 const Gradient = {
@@ -18,18 +18,22 @@ export const layoutCss = style({
 });
 
 export const lightSaberCursorCss = style({
-  cursor: 'url(/media/light-saber-cursor.png), pointer',
-  fontWeight: 500,
-  color: colors.white,
-  selectors: {
-    '&:hover': {
-      background: Gradient.PURPLE,
-      WebkitBoxDecorationBreak: 'clone',
-      WebkitTextFillColor: 'transparent',
-      WebkitBackgroundClip: 'text',
-      color: 'unset',
-      backgroundBlendMode: 'normal, screen',
-      backgroundClip: 'text',
+  '@media': {
+    [viewportQuery.large]: {
+      cursor: 'url(/media/light-saber-cursor.png), pointer',
+      fontWeight: 500,
+      color: colors.white,
+      selectors: {
+        '&:hover': {
+          background: Gradient.PURPLE,
+          WebkitBoxDecorationBreak: 'clone',
+          WebkitTextFillColor: 'transparent',
+          WebkitBackgroundClip: 'text',
+          color: 'unset',
+          backgroundBlendMode: 'normal, screen',
+          backgroundClip: 'text',
+        },
+      },
     },
   },
 });
