@@ -24,7 +24,7 @@ const descriptionCss = css`
 export function Hero() {
   return (
     <section>
-      <Text appearance="white" as="h1" css={h1Css} fontWeight={600} size="xl">
+      <Text appearance="white" as="h1" css={h1Css} fontWeight={700} size="xl">
         Oriyan Ovadia
       </Text>
       <Text appearance="white" css={subtitleCss} fontWeight={500} size="lg">
