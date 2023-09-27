@@ -11,8 +11,6 @@ function App({ Component, pageProps }) {
       <LightInTheDarkCursor />
       <Head>
         <meta name="viewport" content="width=device-width" />
-        <link rel="preconnect" href="https://rsms.me/" />
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
       <Global styles={globalCss} />
       <Component {...pageProps} />
