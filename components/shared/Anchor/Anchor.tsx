@@ -10,7 +10,7 @@ export default function Anchor({ children, href, isExternal = true }) {
     <Text
       as="a"
       className={anchorCss}
-      fontWeight={400}
+      fontWeight={500}
       href={href}
       rel={rel}
       target={target}
