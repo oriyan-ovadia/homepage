@@ -20,8 +20,9 @@ export function About() {
           experiences.
         </Text>
         <Text>
-          When I'm not at the computer, I usually have brunches, draw, make
-          delicious homemade jams, play PlayStation and fight alongside the{' '}
+          When I'm away from the computer, my usual activities include enjoying
+          brunch, drawing, crafting delicious homemade jams, playing
+          PlayStation, and joining epic battles alongside the{' '}
           <span className={lightSaberCursorCss}>Jedi Order</span>.
         </Text>
       </div>
