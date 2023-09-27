@@ -14,6 +14,7 @@ export const layoutCss = style({
   display: 'flex',
   flexDirection: 'column',
   rowGap: 20,
+  lineHeight: 1.625,
 });
 
 export const lightSaberCursorCss = style({
