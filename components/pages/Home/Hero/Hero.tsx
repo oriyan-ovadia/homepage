@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import Text from '@/components/shared/Text/Text';
+import { Text } from 'components/shared';
 import { viewport } from 'styles/utils';
 
 const h1Css = css`

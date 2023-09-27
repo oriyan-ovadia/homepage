@@ -1,20 +1,12 @@
 import React from 'react';
-import { css } from '@emotion/react';
-import { PageSection } from '@/components/shared/PageSection/PageSection';
-import Text from '@/components/shared/Text/Text';
-import Anchor from '@/components/shared/Anchor/Anchor';
-
-const layoutCss = css`
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-`;
+import { Anchor, PageSection, Text } from 'components/shared';
+import { layoutCss, lightSaberCursorCss } from './About.css';
 
 export function About() {
   return (
     <PageSection id="about">
       <PageSection.Heading>About</PageSection.Heading>
-      <div css={layoutCss}>
+      <div className={layoutCss}>
         <Text>
           I'm currently a Frontend Engineer at{' '}
           <Anchor href="https://www.lemonade.com/">Lemonade</Anchor>,
@@ -28,8 +20,9 @@ export function About() {
           experiences.
         </Text>
         <Text>
-          When I'm not at the computer, I usually do brunches, draw, play
-          PlayStation, making delicious home-made jams, and fighting the Empire.
+          When I'm not at the computer, I usually have brunches, draw, make
+          delicious homemade jams, play PlayStation and fight alongside the{' '}
+          <span className={lightSaberCursorCss}>Jedi Order</span>.
         </Text>
       </div>
     </PageSection>

@@ -1,15 +1,14 @@
 import React from 'react';
-import { About } from '@/components/pages/Home/About/About';
-import { Experience } from '@/components/pages/Home/Experience/Experience';
-import { Hero } from '@/components/pages/Home/Hero/Hero';
-import { Footer } from '@/components/pages/Home/Footer/Footer';
+import { About } from 'components/pages/Home/About/About';
+import { Experience } from 'components/pages/Home/Experience/Experience';
+import { Hero } from 'components/pages/Home/Hero/Hero';
+import { Footer } from 'components/pages/Home/Footer/Footer';
 import Head from 'next/head';
-import Container from '@/components/shared/Container/Container';
+import Container from 'components/shared/Container/Container';
 import { css } from '@emotion/react';
-import { SidebarMenu } from '@/components/pages/Home/SidebarMenu/SidebarMenu';
-import { PeerFeedback } from '@/components/pages/Home/PeerFeedback/PeerFeedback';
-import { Social } from '@/components/pages/Home/Social/Social';
-import Anchor from '@/components/shared/Anchor/Anchor';
+import { SidebarMenu } from 'components/pages/Home/SidebarMenu/SidebarMenu';
+import { PeerFeedback } from 'components/pages/Home/PeerFeedback/PeerFeedback';
+import { Social } from 'components/pages/Home/Social/Social';
 import { viewport } from 'styles/utils';
 
 const containerCss = css`

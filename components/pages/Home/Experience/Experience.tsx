@@ -2,9 +2,8 @@ import React from 'react';
 import { db } from 'data/db';
 import { Workplace } from './Workplace';
 import { css } from '@emotion/react';
-import { PageSection } from '@/components/shared/PageSection/PageSection';
-import Text from '@/components/shared/Text/Text';
-import { ArrowRightIcon } from '@/components/shared/icons/ArrowRightIcon';
+import { PageSection, Text } from 'components/shared';
+import { ArrowRightIcon } from 'components/shared/icons/ArrowRightIcon';
 import { colors } from 'styles/utils';
 import { toRem } from 'utils';
 

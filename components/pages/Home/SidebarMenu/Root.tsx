@@ -1,7 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import Text from '@/components/shared/Text/Text';
-import { useEffect, useState } from 'react';
+import { Text } from 'components/shared';
 import { colors, viewport } from 'styles/utils';
 import { useSidebarMenu } from './useSidebarMenu';
 

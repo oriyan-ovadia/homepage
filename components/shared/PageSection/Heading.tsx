@@ -1,17 +1,12 @@
-import { css } from '@emotion/react';
 import Text from '../Text/Text';
-
-const headingCss = css`
-  letter-spacing: 0.1rem;
-  margin-bottom: 2.25rem;
-`;
+import { headingCss } from './Heading.css';
 
 export function Heading({ children, appearance = 'primary' }) {
   return (
     <Text
       appearance="white"
       as="h3"
-      css={headingCss}
+      className={headingCss}
       isUpperCase
       size="sm"
       fontWeight={600}

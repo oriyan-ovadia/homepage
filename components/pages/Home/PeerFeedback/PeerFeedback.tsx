@@ -1,7 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { PageSection } from '@/components/shared/PageSection/PageSection';
-import Text from '@/components/shared/Text/Text';
+import { PageSection, Text } from 'components/shared';
 import { db } from 'data/db';
 
 const ulCss = css`

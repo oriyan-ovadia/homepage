@@ -1,9 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import Anchor from '@/components/shared/Anchor/Anchor';
-import { PageSection } from '@/components/shared/PageSection/PageSection';
-import Text from '@/components/shared/Text/Text';
-import HeartIcon from '@/components/shared/icons/HeartIcon';
+import { Anchor, PageSection, Text } from 'components/shared';
+import HeartIcon from 'components/shared/icons/HeartIcon';
 import { colors } from 'styles/utils';
 
 const footerCss = css`
@@ -27,7 +25,9 @@ export function Footer() {
       <Text size="sm">
         Thank you for scrolling all this way <HeartIcon css={heartCss} /> Built
         with <Anchor href="https://nextjs.org/">Next.js</Anchor> and{' '}
-        <Anchor href="https://emotion.sh/docs/introduction">Emotion CSS</Anchor>
+        <Anchor href="https://vanilla-extract.style/">
+          Vanilla&nbsp;Extract
+        </Anchor>
         , deployed with <Anchor href="https://vercel.com/">Vercel</Anchor>. Code
         is available on{' '}
         <Anchor href="https://github.com/OriyanJ/homepage">GitHub</Anchor>.

@@ -2,16 +2,14 @@ import { css } from '@emotion/react';
 import { toRem } from 'utils';
 import { Heading } from './Heading';
 import { Ref, forwardRef } from 'react';
+import clsx from 'clsx';
+import { pageSectionCss } from './PageSection.css';
 
 export interface PageSectionProps {
   children: React.ReactNode;
   className?: string;
   id?: string;
 }
-
-const pageSectionCss = css`
-  padding-top: ${toRem(100)};
-`;
 
 const PageSectionComponent = forwardRef(
   (
@@ -20,8 +18,7 @@ const PageSectionComponent = forwardRef(
   ) => {
     return (
       <section
-        className={className}
-        css={pageSectionCss}
+        className={clsx(pageSectionCss, className)}
         ref={ref}
         {...restProps}
       >

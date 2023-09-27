@@ -1,22 +1,11 @@
-import React, { CSSProperties } from 'react';
-import { css } from '@emotion/react';
+import { CSSProperties } from 'react';
 import { useRef, useEffect } from 'react';
+import { lightInTheDarkCursorCss } from './LightInTheDarkCursor.css';
 
 const inlineStyle = {
   '--position-y': '0',
   '--position-x': '0',
 } as CSSProperties;
-
-const lightInTheDarkCursorCss = css`
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(
-    600px at var(--position-x) var(--position-y),
-    rgba(29, 78, 216, 0.15),
-    transparent 80%
-  );
-`;
 
 export function LightInTheDarkCursor() {
   const elementRef = useRef(null);
@@ -45,7 +34,7 @@ export function LightInTheDarkCursor() {
 
   return (
     <div
-      css={lightInTheDarkCursorCss}
+      className={lightInTheDarkCursorCss}
       ref={elementRef}
       style={inlineStyle}
     ></div>

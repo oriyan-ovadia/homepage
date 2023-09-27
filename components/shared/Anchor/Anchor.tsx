@@ -1,24 +1,21 @@
 import React from 'react';
-import { css } from '@emotion/react';
-import { colors } from '@/styles/utils';
-
-const anchorCss = css`
-  color: ${colors.white};
-  font-weight: 400;
-  transition: all 200ms;
-
-  &:hover {
-    color: ${colors.primaryLight};
-  }
-`;
+import Text from '../Text/Text';
+import { anchorCss } from './Anchor.css';
 
 export default function Anchor({ children, href, isExternal = true }) {
   const rel = isExternal ? 'noreferrer noopener' : undefined;
   const target = isExternal ? '_blank' : undefined;
 
   return (
-    <a css={anchorCss} href={href} rel={rel} target={target}>
+    <Text
+      as="a"
+      className={anchorCss}
+      fontWeight={400}
+      href={href}
+      rel={rel}
+      target={target}
+    >
       {children}
-    </a>
+    </Text>
   );
 }

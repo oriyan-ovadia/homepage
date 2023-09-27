@@ -1,9 +1,8 @@
 import React from 'react';
-import { Tag } from '@/components/shared/Tag/Tag';
-import Text from '@/components/shared/Text/Text';
+import { Tag, Text } from 'components/shared';
 import { colors, fontSize, viewport } from 'styles/utils';
 import { css } from '@emotion/react';
-import { ArrowRightUpIcon } from '@/components/shared/icons/ArrowRightUpIcon';
+import { ArrowRightUpIcon } from 'components/shared/icons/ArrowRightUpIcon';
 import type { Workplace as _Workplace } from 'types';
 
 interface WorkplaceProps extends React.HTMLAttributes<HTMLDivElement> {

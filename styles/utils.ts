@@ -98,3 +98,27 @@ export const viewport = {
   // largeUp: mediaUp(screenSize.large),
   // xLargeUp: mediaUp(screenSize.xLarge),
 };
+
+export const viewportQuery = {
+  small: '(max-width: 989px)',
+  large: '(min-width: 990px)',
+};
+
+export function viewportMediaQuery({
+  small,
+  large,
+}: {
+  small: any;
+  large: any;
+}) {
+  if (small == null || large == null) {
+    return {};
+  }
+
+  return {
+    '@media': {
+      ...(small != null && { '(max-width: 989px)': small }),
+      ...(large != null && { '(min-width: 990px)': large }),
+    },
+  };
+}
