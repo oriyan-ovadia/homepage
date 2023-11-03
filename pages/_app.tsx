@@ -3,7 +3,7 @@ import { Global } from '@emotion/react';
 import { globalCss } from 'styles/global';
 import { LightInTheDarkCursor } from 'components/shared';
 import Head from 'next/head';
-import 'normalize.css';
+import 'node_modules/modern-normalize/modern-normalize.css';
 
 function App({ Component, pageProps }) {
   return (
