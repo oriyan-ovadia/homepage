@@ -1,7 +1,10 @@
+import type { TextProps } from '../Text/Text';
 import Text from '../Text/Text';
 import { headingCss } from './Heading.css';
 
-export function Heading({ children, appearance = 'primary' }) {
+export interface PageSection_HeadingProps extends TextProps {}
+
+export function Heading({ children, ...restProps }: PageSection_HeadingProps) {
   return (
     <Text
       appearance="white"
@@ -10,6 +13,7 @@ export function Heading({ children, appearance = 'primary' }) {
       isUpperCase
       size="sm"
       fontWeight={600}
+      {...restProps}
     >
       {children}
     </Text>

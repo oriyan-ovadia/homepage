@@ -1,8 +1,13 @@
-import React from 'react';
-import { css } from '@emotion/react';
 import { Text } from 'components/shared';
-import { colors, viewport } from 'styles/utils';
 import { useSidebarMenu } from './useSidebarMenu';
+import {
+  anchorCss,
+  itemCss,
+  lineRecipe,
+  sidebarMenuRootCss,
+  textRecipe,
+  ulCss,
+} from './Root.css';
 
 const items = [
   {
@@ -19,70 +24,25 @@ const items = [
   },
 ];
 
-const sidebarMenuRootCss = css`
-  ${viewport.small} {
-    display: none;
-  }
-`;
-
-const ulCss = css`
-  max-width: max-content;
-  margin-top: 4rem;
-`;
-
-const itemCss = props => css`
-  display: flex;
-  align-items: center;
-  column-gap: 18px;
-
-  &:hover {
-    .line {
-      width: 4rem;
-    }
-  }
-`;
-
-const textCss = props => css`
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: ${props.isActive ? colors.white : '#64748b'};
-
-  a {
-    display: flex;
-    align-items: center;
-    column-gap: 18px;
-    padding-block: 0.65rem;
-  }
-`;
-
-const lineCss = props => css`
-  height: 1px;
-  width: ${props.isActive ? '4rem' : '2rem'};
-  background-color: ${props.isActive ? colors.white : '#64748b'};
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.15s;
-`;
-
 export function Root() {
   const { activeHash, onClickNavItem } = useSidebarMenu();
 
   return (
-    <nav css={sidebarMenuRootCss}>
-      <ul css={ulCss}>
+    <nav className={sidebarMenuRootCss}>
+      <ul className={ulCss}>
         {items.map(({ href, label }) => {
           const isActive = activeHash === href;
 
           return (
-            <li css={itemCss({ isActive })} key={href}>
+            <li className={itemCss} key={href}>
               <Text
-                css={textCss({ isActive })}
+                className={textRecipe({ isActive })}
+                fontWeight={700}
                 isUpperCase
                 size="xs"
-                fontWeight={700}
               >
-                <a href={href} onClick={onClickNavItem}>
-                  <span className="line" css={lineCss({ isActive })}></span>
+                <a className={anchorCss} href={href} onClick={onClickNavItem}>
+                  <span className={lineRecipe({ isActive })}></span>
                   {label}
                 </a>
               </Text>

@@ -1,4 +1,4 @@
-import { Workplace } from 'types';
+import type { Workplace } from 'types';
 
 const experience: Workplace[] = [
   {

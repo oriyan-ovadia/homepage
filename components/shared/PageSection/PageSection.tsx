@@ -1,7 +1,6 @@
-import { css } from '@emotion/react';
-import { toRem } from 'utils';
 import { Heading } from './Heading';
-import { Ref, forwardRef } from 'react';
+import type { Ref } from 'react';
+import { forwardRef } from 'react';
 import clsx from 'clsx';
 import { pageSectionCss } from './PageSection.css';
 
@@ -11,6 +10,7 @@ export interface PageSectionProps {
   id?: string;
 }
 
+// eslint-disable-next-line react/display-name
 const PageSectionComponent = forwardRef(
   (
     { children, className, ...restProps }: PageSectionProps,

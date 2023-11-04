@@ -1,8 +1,17 @@
-import React from 'react';
 import Text from '../Text/Text';
 import { anchorCss } from './Anchor.css';
 
-export default function Anchor({ children, href, isExternal = true }) {
+interface AnchorProps {
+  children?: React.ReactNode;
+  href?: string;
+  isExternal?: boolean;
+}
+
+export default function Anchor({
+  children,
+  href,
+  isExternal = true,
+}: AnchorProps) {
   const rel = isExternal ? 'noreferrer noopener' : undefined;
   const target = isExternal ? '_blank' : undefined;
 

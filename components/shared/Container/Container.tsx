@@ -1,10 +1,7 @@
 import clsx from 'clsx';
 import { containerCss } from './Container.css';
 
-export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  children: React.ReactNode;
-}
+export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 function Container({ children, className, ...restProps }: ContainerProps) {
   return (

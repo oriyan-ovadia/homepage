@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import {
+import type {
   ComponentPropsWithoutRef,
   ElementType,
   PropsWithChildren,
 } from 'react';
-import { fontSize } from 'styles/utils';
+import type { fontSize } from 'styles/utils';
 import { textRecipe } from './Text.css';
 
 const DEFAULT_ELEMENT_TYPE = 'p';

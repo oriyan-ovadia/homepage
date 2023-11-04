@@ -1,18 +1,17 @@
 import { Fragment } from 'react';
-import { Global } from '@emotion/react';
-import { globalCss } from 'styles/global';
 import { LightInTheDarkCursor } from 'components/shared';
 import Head from 'next/head';
 import 'node_modules/modern-normalize/modern-normalize.css';
+import type { AppProps } from 'next/app';
+import '../styles/global.css.ts';
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
       <LightInTheDarkCursor />
       <Head>
-        <meta name="viewport" content="width=device-width" />
+        <meta content="width=device-width" name="viewport" />
       </Head>
-      <Global styles={globalCss} />
       <Component {...pageProps} />
     </Fragment>
   );

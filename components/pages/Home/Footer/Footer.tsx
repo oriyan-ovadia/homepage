@@ -1,30 +1,14 @@
-import React from 'react';
-import { css } from '@emotion/react';
 import { Anchor, PageSection, Text } from 'components/shared';
 import HeartIcon from 'components/shared/icons/HeartIcon';
-import { colors } from 'styles/utils';
-
-const footerCss = css`
-  max-width: 28rem;
-
-  > :not(a) {
-    color: #64748b;
-  }
-`;
-
-const heartCss = css`
-  width: 12px;
-  color: ${colors.primaryLight};
-  margin-inline: 4px 3px;
-  opacity: 0.8;
-`;
+import { footerCss, heartCss } from './Footer.css';
 
 export function Footer() {
   return (
-    <PageSection css={footerCss} id="footer">
+    <PageSection className={footerCss} id="footer">
       <Text size="sm">
-        Thank you for scrolling all this way <HeartIcon css={heartCss} /> Built
-        with <Anchor href="https://nextjs.org/">Next.js</Anchor> and{' '}
+        Thank you for scrolling all this way <HeartIcon className={heartCss} />{' '}
+        Built with <Anchor href="https://nextjs.org/">Next.js</Anchor>,{' '}
+        <Anchor href="https://www.typescriptlang.org/">TypeScript</Anchor> and{' '}
         <Anchor href="https://vanilla-extract.style/">
           Vanilla&nbsp;Extract
         </Anchor>

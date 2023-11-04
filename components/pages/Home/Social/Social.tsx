@@ -1,4 +1,3 @@
-import React from 'react';
 import { Anchor } from 'components/shared';
 import LinkedInIcon from 'components/shared/icons/LinkedInIcon';
 import { linkedInIconCss, socialCss } from './Social.css';

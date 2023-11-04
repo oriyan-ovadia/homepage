@@ -1,11 +1,5 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { SidebarMenuContext } from './Provider';
-
-function navigateTo(targetId) {
-  const url = `${window.location.pathname}#${targetId}`;
-
-  window.history.replaceState({}, '', url);
-}
 
 export function useSidebarMenu() {
   const context = useContext(SidebarMenuContext);

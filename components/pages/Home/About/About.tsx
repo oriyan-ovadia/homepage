@@ -1,4 +1,3 @@
-import React from 'react';
 import { Anchor, PageSection, Text } from 'components/shared';
 import { layoutCss, lightSaberCursorCss } from './About.css';
 
@@ -8,7 +7,7 @@ export function About() {
       <PageSection.Heading>About</PageSection.Heading>
       <div className={layoutCss}>
         <Text>
-          I'm currently a Frontend Engineer at{' '}
+          I&apos;m currently a Frontend Engineer at{' '}
           <Anchor href="https://www.lemonade.com/">Lemonade</Anchor>,
           collaborating with an amazing team to craft web experiences.
         </Text>
@@ -20,8 +19,8 @@ export function About() {
           experiences.
         </Text>
         <Text>
-          When I'm away from the computer, my usual activities include enjoying
-          brunch, drawing, crafting delicious homemade jams, playing
+          When I&apos;m away from the computer, my usual activities include
+          enjoying brunch, drawing, crafting delicious homemade jams, playing
           PlayStation, and joining epic battles alongside the{' '}
           <span className={lightSaberCursorCss}>Jedi Order</span>.
         </Text>

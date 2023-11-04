@@ -1,3 +1,4 @@
+/*
 import { css } from '@emotion/react';
 import { fontSize } from 'styles/utils';
 
@@ -27,3 +28,4 @@ const headingCss = props => css`
 export function SectionHeading({ children, appearance = 'primary' }) {
   return <h3 css={headingCss({ appearance })}>{children}</h3>;
 }
+*/

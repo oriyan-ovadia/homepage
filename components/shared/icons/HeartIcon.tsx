@@ -1,4 +1,6 @@
-function WavesIcon(props) {
+import type { SVGAttributes } from 'react';
+
+function WavesIcon(props: SVGAttributes<SVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

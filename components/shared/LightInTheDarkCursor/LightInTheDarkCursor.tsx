@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 import { useRef, useEffect } from 'react';
 import { lightInTheDarkCursorCss } from './LightInTheDarkCursor.css';
 

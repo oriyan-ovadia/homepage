@@ -1,7 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import { SVGProps } from 'react';
-
-interface MyProps extends SVGProps<SVGSVGElement> {}
 
 export default function Document() {
   return (

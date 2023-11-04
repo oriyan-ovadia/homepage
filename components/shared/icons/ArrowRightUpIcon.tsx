@@ -1,10 +1,12 @@
-export function ArrowRightUpIcon({ className }) {
+import type { SVGAttributes } from 'react';
+
+export function ArrowRightUpIcon(props: SVGAttributes<SVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 20 20"
-      className={className}
+      {...props}
     >
       <path
         fillRule="evenodd"

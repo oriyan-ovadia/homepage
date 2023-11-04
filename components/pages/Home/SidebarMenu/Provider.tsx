@@ -1,11 +1,17 @@
-import React from 'react';
+import type { MouseEvent } from 'react';
 import { createContext, useState } from 'react';
 
-export const SidebarMenuContext = createContext({
-  activeHash: '',
-  onClickNavItem: (event: any) => {},
-  onSetActiveHash: (targetId: any) => {},
-});
+interface SidebarProviderProps {
+  children: React.ReactNode;
+}
+
+interface SidebarMenu_ContextProps {
+  activeHash: string;
+  onClickNavItem: (event: MouseEvent) => void;
+  onSetActiveHash: (event: MouseEvent) => void;
+}
+
+export const SidebarMenuContext = createContext<SidebarMenu_ContextProps>(null);
 
 function navigateTo(targetId) {
   const url = `${window.location.pathname}#${targetId}`;
@@ -23,7 +29,7 @@ function scrollTo(targetEl) {
   });
 }
 
-export function Provider({ children }) {
+export function Provider({ children }: SidebarProviderProps) {
   const [activeHash, setActiveHash] = useState('');
 
   function onSetActiveHash(targetId) {
@@ -31,9 +37,11 @@ export function Provider({ children }) {
     navigateTo(targetId);
   }
 
-  function onClickNavItem(event) {
+  function onClickNavItem(event: MouseEvent) {
     event?.preventDefault();
-    const url = new URL(event.target.href);
+
+    const target = event.target as HTMLAnchorElement;
+    const url = new URL(target.href);
     const targetId = url.hash.substring(1);
     const targetEl = document.getElementById(targetId);
 
