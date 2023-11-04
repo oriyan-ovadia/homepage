@@ -7,7 +7,12 @@ import Container from 'components/shared/Container/Container';
 import { SidebarMenu } from 'components/pages/Home/SidebarMenu/SidebarMenu';
 import { PeerFeedback } from 'components/pages/Home/PeerFeedback/PeerFeedback';
 import { Social } from 'components/pages/Home/Social/Social';
-import { containerCss, headerCss, layoutCss, mainCss } from './index.css';
+import {
+  containerCss,
+  headerCss,
+  layoutCss,
+  mainCss,
+} from '../components/pages/Home/Home/index.css';
 
 export default function Home() {
   return (
