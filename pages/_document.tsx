@@ -4,26 +4,26 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link rel="preconnect" href="https://rsms.me/" />
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <link href="https://rsms.me/" rel="preconnect" />
+        <link href="https://rsms.me/inter/inter.css" rel="stylesheet" />
         <link
+          href="/favicon/apple-touch-icon.png"
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
         />
         <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
           href="/favicon/favicon-32x32.png"
+          rel="icon"
+          sizes="32x32"
+          type="image/png"
         />
         <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
           href="/favicon/favicon-16x16.png"
+          rel="icon"
+          sizes="16x16"
+          type="image/png"
         />
-        <link rel="manifest" href="/favicon/site.webmanifest"></link>
+        <link href="/favicon/site.webmanifest" rel="manifest"></link>
       </Head>
       <body>
         <Main />

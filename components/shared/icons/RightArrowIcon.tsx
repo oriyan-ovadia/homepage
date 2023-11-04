@@ -3,8 +3,8 @@ import type { SVGAttributes } from 'react';
 function RightArrowIcon(props: SVGAttributes<SVGElement>) {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 31.49 31.49"
+      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <path

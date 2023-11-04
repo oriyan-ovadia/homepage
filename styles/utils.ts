@@ -34,17 +34,6 @@ export const fontSize = {
   xl: '3rem',
 };
 
-export const screenSize = {
-  small: 767,
-  smallPx: '767px',
-  medium: 992,
-  mediumPx: '992px',
-  large: 1200,
-  largePx: '1200px',
-  xLarge: 1600,
-  xLargePx: '1600px',
-};
-
 export const fontFamily = {
   displayPrimary: 'Inter',
   displaySecondary: 'Inter',
@@ -53,72 +42,7 @@ export const fontFamily = {
   serif: 'Libre-Baskerville',
 };
 
-/**
- * Screen breakpoints based on "popularity" guesstimates and statistics derived
- * from annualized monthly Google queries and some fuzzy math.
- *
- * @see
- * [Screen Size.es](http://screensiz.es/) (Using "Device width" for media-queries)
- */
-export const screenSizes = {
-  // Smallest mobile supported
-  mobile: 360,
-  tablet: 768,
-  desktop: 1280,
-};
-
-export const mediaBetween = (minScreenSize, maxScreenSize) =>
-  `@media (min-width: ${minScreenSize}px) and (max-width: ${maxScreenSize}px)`;
-
-export const mediaDown = screenSize =>
-  `@media (max-width: ${screenSize - 1}px)`;
-
-export const mobileOnly = `@media (max-width: ${screenSizes.tablet - 1}px)`;
-
-export const tabletOnly = mediaBetween(
-  screenSizes.tablet,
-  screenSizes.desktop - 1,
-);
-
-export const mediaUp = viewportSize => `@media (min-width: ${viewportSize}px)`;
-
-export const tabletUp = `@media (min-width: ${screenSizes.tablet}px)`;
-
-export const desktopUp = `@media (min-width: ${screenSizes.desktop}px)`;
-
-export const viewport = {
-  small: mediaDown(990),
-  large: mediaUp(990),
-  // smallOnly: mediaDown(screenSize.small),
-  // smallUp: mediaUp(screenSize.small),
-  // mediumOnly: mediaBetween(screenSize.medium, screenSize.xLarge - 1),
-  // mediumUp: mediaUp(screenSize.medium),
-  // largeOnly: '',
-  // largeUp: '',
-  // largeUp: mediaUp(screenSize.large),
-  // xLargeUp: mediaUp(screenSize.xLarge),
-};
-
 export const viewportQuery = {
   small: '(max-width: 989px)',
   large: '(min-width: 990px)',
 };
-
-export function viewportMediaQuery({
-  small,
-  large,
-}: {
-  small: any;
-  large: any;
-}) {
-  if (small == null || large == null) {
-    return {};
-  }
-
-  return {
-    '@media': {
-      ...(small != null && { '(max-width: 989px)': small }),
-      ...(large != null && { '(min-width: 990px)': large }),
-    },
-  };
-}

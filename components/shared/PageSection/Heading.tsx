@@ -10,9 +10,9 @@ export function Heading({ children, ...restProps }: PageSection_HeadingProps) {
       appearance="white"
       as="h3"
       className={headingCss}
+      fontWeight={600}
       isUpperCase
       size="sm"
-      fontWeight={600}
       {...restProps}
     >
       {children}
